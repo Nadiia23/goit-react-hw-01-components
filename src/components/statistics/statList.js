@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from "./statistics.module.css";
 
-export default function StatList({ label, percentage}) {
+function StatList({ label, percentage}) {
   return (
       <li className={css.item} style={{ backgroundColor: getRandomHexColor() }}>
       <span className={css.label}>{label}</span>
@@ -20,3 +20,5 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+export default StatList

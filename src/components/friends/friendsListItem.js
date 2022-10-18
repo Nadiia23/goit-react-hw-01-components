@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from "./friends.module.css";
 
-export default function FriendsListItem({ avatar, name, isOnline}) {
+function FriendsListItem({ avatar, name, isOnline}) {
   return (
      <li className={css.item}>
           <span className={isOnline ? `${css.online}` : `${css.ofline}`}></span>
@@ -16,3 +16,5 @@ FriendsListItem.propTypes = {
     avatar: PropTypes.string.isRequired,
     isOnline:PropTypes.bool.isRequired,
 };
+
+export default FriendsListItem
